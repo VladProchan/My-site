@@ -513,8 +513,7 @@ h6 {
   padding-block: 3.125rem;
   display: flex;
   flex-direction: column;
-  row-gap: 1.5625rem;
-  height: 100vh
+  row-gap: 1.5625rem
 }
 .contacts__subtitle {
   text-align: center;
@@ -575,6 +574,11 @@ h6 {
 @media (min-width:61.99875em)and (min-width:120em) {
   .me__container {
     padding-right: .9375rem
+  }
+}
+@media (min-width:61.99875em) {
+  .contacts__container {
+    height: 100vh
   }
 }
 @media (min-width:89.6875em) {
@@ -806,6 +810,11 @@ h6 {
 @media (min-width:61.99875em)and (max-width:90.625em) {
   .me__container {
     padding-right: 6.5625rem
+  }
+}
+@media (min-width:47.99875em)and (max-width:47.99875em) {
+  .card {
+    box-shadow: 0 0 .4375rem 0 rgba(61,13,53,.25)
   }
 }
 @media (any-hover:hover) {
