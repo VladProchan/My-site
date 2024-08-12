@@ -33,6 +33,49 @@
   font-weight: 400;
   font-style: normal
 }
+[class*=_icon-]::before {
+  font-family: icons;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+._icon-contacts:before {
+  content: ""
+}
+._icon-github:before {
+  content: ""
+}
+._icon-home:before {
+  content: ""
+}
+._icon-image:before {
+  content: ""
+}
+._icon-linkedin:before {
+  content: ""
+}
+._icon-me:before {
+  content: ""
+}
+._icon-telegram:before {
+  content: ""
+}
+._icon-upworck:before {
+  content: ""
+}
+._icon-viber:before {
+  content: ""
+}
+._icon-whatsApp:before {
+  content: ""
+}
+._icon-worck:before {
+  content: ""
+}
 * {
   padding: 0;
   margin: 0;
@@ -204,41 +247,18 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2.375rem;
+  font-size: 2.375rem;
   aspect-ratio: 1/1;
   transition: -webkit-transform .3s;
   transition: transform .3s;
   transition: transform .3s,-webkit-transform .3s;
   will-change: transform
 }
-.fp-bullets .fp-bullet:nth-child(1) {
-  background: url(../img/icon-fonts/home.svg) center/contain no-repeat
-}
-.fp-bullets .fp-bullet:nth-child(2) {
-  background: url(../img/icon-fonts/me.svg) center/contain no-repeat
-}
-.fp-bullets .fp-bullet:nth-child(3) {
-  background: url(../img/icon-fonts/image.svg) center/contain no-repeat
-}
-.fp-bullets .fp-bullet:nth-child(4) {
-  background: url(../img/icon-fonts/contacts.svg) center/contain no-repeat
-}
 .fp-bullets .fp-bullet-active {
   will-change: transform;
-  -webkit-transform: scale(1.4);
-  transform: scale(1.4)
-}
-.fp-bullets .fp-bullet-active:nth-child(1) {
-  background: url(../img/icon-fonts/home-active.svg) center/contain no-repeat
-}
-.fp-bullets .fp-bullet-active:nth-child(2) {
-  background: url(../img/icon-fonts/me-active.svg) center/contain no-repeat
-}
-.fp-bullets .fp-bullet-active:nth-child(3) {
-  background: url(../img/icon-fonts/image-active.svg) center/contain no-repeat
-}
-.fp-bullets .fp-bullet-active:nth-child(4) {
-  background: url(../img/icon-fonts/contacts-active.svg) center/contain no-repeat
+  color: #cc1c39;
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3)
 }
 .ibg {
   width: 100%;
@@ -576,11 +596,11 @@ h6 {
     padding-inline: .5rem
   }
   .fp-bullets .fp-bullet {
-    width: 1.875rem
+    font-size: 1.875rem
   }
   .fp-bullets .fp-bullet-active {
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3)
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2)
   }
   .body-hero__text {
     margin-bottom: 4.6875rem
@@ -776,8 +796,8 @@ h6 {
 }
 @media (any-hover:hover) {
   .fp-bullets .fp-bullet:hover {
-    -webkit-transform: scale(1.4);
-    transform: scale(1.4)
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3)
   }
   .portfolio__item-link:hover {
     color: #cc1c39

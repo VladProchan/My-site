@@ -486,5 +486,12 @@
     }
     const da = new DynamicAdapt("max");
     da.init();
+    const myBoolet = document.querySelectorAll(".fp-bullet");
+    if (myBoolet) for (let i = 0; i < myBoolet.length; ++i) {
+        myBoolet[0].classList.add("_icon-home");
+        myBoolet[1].classList.add("_icon-me");
+        myBoolet[2].classList.add("_icon-image");
+        myBoolet[3].classList.add("_icon-contacts");
+    }
     window["FLS"] = true;
 })();
