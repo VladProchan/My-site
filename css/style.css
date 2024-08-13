@@ -436,6 +436,7 @@ h6 {
 }
 .portfolio__menu {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   margin-bottom: 1.5625rem
 }
@@ -449,7 +450,11 @@ h6 {
   transition: color .3s;
   font-size: 2.25rem;
   text-transform: uppercase;
-  font-weight: 600
+  font-weight: 600;
+  padding: .9375rem;
+  box-shadow: 0 0 .9375rem 0 rgba(61,13,53,.25);
+  border-radius: .9375rem;
+  transition: all .3s
 }
 .portfolio__wrap {
   display: grid;
@@ -463,14 +468,29 @@ h6 {
   box-shadow: 0 0 .9375rem 0 rgba(61,13,53,.25);
   border-radius: .9375rem;
   overflow: hidden;
-  width: 100%
+  width: 100%;
+  height: 100%
 }
-.card img {
+.card__images {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: .9375rem
+}
+.card__image {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  border-radius: .9375rem
+  border-radius: .9375rem;
+  z-index: 2
+}
+.card__image--thu {
+  transition: opacity .5s;
+  opacity: 0
 }
 .card__hover-bottom {
   position: absolute;
@@ -479,12 +499,14 @@ h6 {
   justify-content: center;
   text-transform: uppercase;
   font-weight: 300;
-  transition: bottom .3s;
+  transition: bottom .5s;
   color: #fff;
   bottom: -15%;
   left: 0;
   width: 100%;
-  height: 15%
+  height: 15%;
+  z-index: 2;
+  background-color: rgba(95,95,95,.7)
 }
 .contacts__container {
   padding-block: 3.125rem;
@@ -529,7 +551,7 @@ h6 {
   .portfolio__wrap {
     gap: 1.25rem;
     grid-template-columns: repeat(auto-fill,minmax(21.875rem,1fr));
-    grid-template-rows: 18.75rem 18.75rem
+    grid-auto-rows: 18.75rem
   }
   .contacts__subtitle {
     margin-bottom: 1.5625rem
@@ -705,13 +727,20 @@ h6 {
     margin: 0 auto
   }
   .portfolio__item-link {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
     text-align: center;
     display: block;
     margin: 0 auto
   }
   .portfolio__wrap {
     margin-bottom: .9375rem
+  }
+  .portfolio__card {
+    width: 100%;
+    aspect-ratio: 460/300
+  }
+  .card__hover-bottom {
+    height: 20%
   }
   .contacts__container {
     padding-top: 1.5625rem;
@@ -789,36 +818,29 @@ h6 {
     padding-right: 6.5625rem
   }
 }
-@media (min-width:47.99875em)and (max-width:47.99875em) {
-  .card {
-    box-shadow: 0 0 .4375rem 0 rgba(61,13,53,.25)
-  }
-}
 @media (any-hover:hover) {
   .fp-bullets .fp-bullet:hover {
     -webkit-transform: scale(1.3);
     transform: scale(1.3)
   }
   .portfolio__item-link:hover {
-    color: #cc1c39
+    background-color: #200b31;
+    color: #fff
   }
   .card:hover {
     box-shadow: 0 0 .9375rem 0 #3d0d35
   }
-  .card:hover .card__hover-top {
-    top: 0
-  }
   .card:hover .card__hover-bottom {
     bottom: 0
+  }
+  .card:hover .card__image--thu {
+    opacity: 1
   }
   .contacts__card:hover {
     background-color: #cc1c39
   }
 }
 @media (any-hover:none) {
-  .card .card__hover-top {
-    top: 0
-  }
   .card .card__hover-bottom {
     bottom: 0
   }
